@@ -78,7 +78,7 @@ zip -r name_of_your_directory.zip name_of_your_directory
 
 ## Variables de Entorno
 
-Para agregar variables de entorno en Ubutnu (18.0.4) se necesita agregar un archivo de script en la carpeta ```/etc/profile.d```. El contenido del archivo debe ser algo como:
+Para agregar variables de entorno en Ubutnu (18.0.4) se necesita agregar un archivo de script en la carpeta ```/etc/profile.d```. Se necesitan privilegios de root por lo cual debemos usar el comando ```sudo touch nuevo_archivo.sh``` para poder crear el archivo de script. El contenido del archivo debe ser algo como:
 
 ```
 export MYPLANT_DB_NAME=my_plants
