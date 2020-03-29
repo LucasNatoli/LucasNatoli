@@ -7,6 +7,7 @@ Para ayudar a las mentes dispersas por la creatividad y eliminar la necesidad de
 + [Mysql](https://github.com/LucasNatoli/LucasNatoli/blob/master/snips.md#mysql)
 + [Wordpress](https://github.com/LucasNatoli/LucasNatoli/blob/master/snips.md#wordpress)
 + [Shell Commands](https://github.com/LucasNatoli/LucasNatoli/blob/master/snips.md#shell-commands)
++ [Variables de Entorno](https://github.com/LucasNatoli/LucasNatoli/blob/master/snips.md#variables-de-entorno)
 
 ## Apache
 
