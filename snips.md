@@ -71,6 +71,25 @@ rm [version].zip
 
 ## Shell Commands
 
+Comprimir una carpeta y sus subcarpetas 
 ```bash
 zip -r name_of_your_directory.zip name_of_your_directory
+```
+
+## Variables de Entorno
+
+Para agregar variables de entorno en Ubutnu (18.0.4) se necesita agregar un archivo de script en la carpeta ```/etc/profile.d```. El contenido del archivo debe ser algo como:
+
+```
+export MYPLANT_DB_NAME=my_plants
+export MYPLANT_DB_USER=my_plants
+export MYPLANT_DB_PASSWORD=my_plants
+export MYPLANT_DB_HOST=localhost
+export MYPLANT_DB_PORT=3006
+```
+Una vez guardado el archivo de script, se puede ejecutar ```source /etc/profile``` para que se corran todos los scripts de inicio. 
+
+Para verificar que las variables esten cargadas correctamente se puede ejectuar por ejemplo el comando:
+```
+echo $MYPLANT_DB_NAME
 ```
