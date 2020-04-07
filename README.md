@@ -1,6 +1,6 @@
 # Welcome
 
-This is my personal repository. It's meant to keep some developing notes and code snippets.
+This is my personal repository. It's meant to keep some development notes and code snippets.
 
 ## Index
 
