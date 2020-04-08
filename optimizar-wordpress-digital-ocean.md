@@ -10,15 +10,15 @@ En esta guía vamos a aprender a configurar una base de datos MySQL y un servido
 
 Antes de empezar con esta guía necesitas:
 
-* Dos servidores Ubuntu 18.0.4. Cada uno debe tener un usuario con privilegios de administrador (root) y además un Firewall habilitado (como se describe en ...). Uno de los servidores va a hostear el backend Mysql al que nos referiremos como **servidor de base de datos**. El otro funcionará como servidor web y se conectara a la base de datos remotamente. Nos referiremos este último como **servidor web**
+* Dos servidores Ubuntu 18.04. Cada uno debe tener un usuario con privilegios de administrador (root) y además un Firewall habilitado (como se describe en ...). Uno de los servidores va a hostear el backend Mysql al que nos referiremos como **servidor de base de datos**. El otro funcionará como servidor web y se conectara a la base de datos remotamente. Nos referiremos este último como **servidor web**
 
 
-* Nginx y PHP instalados en el **servidor web**. La guía __Como instalar Nginx y PHP en Ubuntu 18.0.4__ te ayudara para completar este proceso.
-* MySQL instalado en el **servidor de base de datos**. La guía __Como instalar Mysql en Ubuntu 18.0.4__ te ayudara a completar este paso. Opcionalmente (aunque se recomienda enfáticamente), certificados TLS/SSL de Let's Encrypt instalados en el servidor web. Los certificados son gratuitos aunque ya deberás contar con un nombre de dominio pago y haber configurados los registros DNS para tu servidor. La guía __Cómo proteger Nginx con Let's Encrypt__ te ayudara a obtener estos certificados.
+* Nginx y PHP instalados en el **servidor web**. La guía __Como instalar Nginx y PHP en Ubuntu 18.04__ te ayudara para completar este proceso.
+* MySQL instalado en el **servidor de base de datos**. La guía __Como instalar Mysql en Ubuntu 18.04__ te ayudara a completar este paso. Opcionalmente (aunque se recomienda enfáticamente), certificados TLS/SSL de Let's Encrypt instalados en el servidor web. Los certificados son gratuitos aunque ya deberás contar con un nombre de dominio pago y haber configurados los registros DNS para tu servidor. La guía __Cómo proteger Nginx con Let's Encrypt__ te ayudara a obtener estos certificados.
 
 ## Paso 1 - Configurar MySQL para que atienda conexiones remotas
 
-Almacenar los datos en un servidor separado es una buena manera de escalar facilmente luego de tocar el techo de performance de la configuración de una máquina. También provee la estructura básica para balancear la carga y expandir la infrastructura aún más en el futuro. Luego de instalar MySQL siguiendo la guía indicada en los prerequisitos, necesitraś cambiar algunos valores en la configuración de MySQL para que atienda conexiones realizadas desde otra otras computadoras
+Almacenar los datos en un servidor separado es una buena manera de escalar fácilmente luego de tocar el techo de performance de la configuración de una máquina. También provee la estructura básica para balancear la carga y expandir la infrastructura aún más en el futuro. Luego de instalar MySQL siguiendo la guía indicada en los prerequisitos, necesitraś cambiar algunos valores en la configuración de MySQL para que atienda conexiones realizadas desde otra otras computadoras
 
 La mayoria de estos cambios se realizadrán en el archivo `mysqld.cnf`, ubicado por defecto en el directorio `/etc/mysql/mysql.conf.d/`. Abre este archivo utilizando privilegios administrativos en servidor de base de datos utilizando tu editor preferido. Aquí utilizaremos `nano`: 
 
@@ -275,7 +275,7 @@ WordPress incluye un archivo de configuración de ejemplo que utilizaremos como 
 $ cp ~/wordpress/wp-config-sample.php ~/worpdress/wp-config.php
 ```
 
-Cuando edites tu archivo de configuración, la primera tarea sera ajustar algunas claves secretas para darle mas seguridad a la instalación. WordPress prové un generador de estos valores de manera que no hace falte que intentes inventar algunos buenos valores por ti mismo. Estos valores se utilizarán internamente, por lo que usar valores bien complejos no daña la usabilidad.
+Cuando edites tu archivo de configuración, la primera tarea sera ajustar algunas claves secretas para darle mas seguridad a la instalación. WordPress provee un generador de estos valores de manera que no hace falte que intentes inventar algunos buenos valores por ti mismo. Estos valores se utilizarán internamente, por lo que usar valores bien complejos no daña la usabilidad.
 
 Para obtener los valores seguros desde el generador de claves de WordPress, ingresa:
 
