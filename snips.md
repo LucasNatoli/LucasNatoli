@@ -73,8 +73,21 @@ rm [version].zip
 ## Shell Commands
 
 Comprimir una carpeta y sus subcarpetas 
+
 ```bash
 zip -r name_of_your_directory.zip name_of_your_directory
+```
+
+Determinar el tamaño total del un directorio
+
+```bash
+du -hs /path/to/directory
+```
+
+Determinar el espacio libre de un volumen 
+
+```bash
+df
 ```
 
 ## Variables de Entorno
