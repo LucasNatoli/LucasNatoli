@@ -21,6 +21,8 @@ Por lo tanto la siguiente se recomienda la siguiente lista de módulos:
 
 Para instalar estos modulos ingresa el comando:
 
+REVISAR !!
+
 ```
 sudo apt install php-curl php-dom php-exif php-common php-json php-mbstring php-mysql php-libsodium libapache2-mod-php  php-imagick php-xml php-zip 
 ```
