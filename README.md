@@ -1,6 +1,6 @@
 # Bienvenidos
 
-Este es mi repositorio personal. Lo utilizo para guardar guías de desarrollo y snippets de codigo.
+Este es mi repositorio personal. Lo utilizo para guardar guías de desarrollo, snippets de código, etc.
 
 ## Indice
 
