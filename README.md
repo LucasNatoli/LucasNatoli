@@ -1,8 +1,22 @@
 # Bienvenidos
 
-Este es mi repositorio personal. Lo utilizo para guardar guías de desarrollo, snippets de código, etc.
+![Alt](banner.svg)
 
-## Indice
+
+## Acerca de mi
+
+Soy un desarrolador de software profesional con mas de 25 años de experiencia. 
+
+Trabaje en distintas industrias
+
+* Finanzas: Bancos y Fintech
+* Retail: Supermercados, Distribucuion
+* Industrial: Metalurgica y Automotriz.
+* Aeronautica: Oficina Tecnica
+
+Siempre con el objetivo de "inyectar" computacion en la vida diaria. 
+
+## Snips
 
 + [Cómo instalar Nginx y PHP en un servidor Ubuntu 18.04](https://github.com/LucasNatoli/LucasNatoli/blob/master/como-instalar-nginx-php-en-ubuntu-18-04-es.md)
 
