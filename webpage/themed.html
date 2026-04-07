@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Themed Demo</title>
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --accent: #3b82f6;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --text: #e5ebe6;
+          --accent: #60a5fa;
+        }
+      }
+
+      html[data-theme="light"] {
+        --bg: #ffffff;
+        --text: #111111;
+        --accent: #3b82f6;
+      }
+
+      html[data-theme="dark"] {
+        --bg: #0f172a;
+        --text: #e5e7eb;
+        --accent: #60a5fa;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.25s ease, color 0.25s ease;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 16px;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 12px;
+        background: rgba(127, 127, 127, 0.1);
+        margin-bottom: 20px;
+      }
+
+      button {
+        border: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        background: var(--accent);
+        color: white;
+        margin-right: 8px;
+      }
+
+      button.secondary {
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--text);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🌗 Themed System Demo</h1>
+
+      <div class="card">
+        <strong>Modo actual:</strong>
+        <span id="mode-label"></span>
+      </div>
+
+      <div class="card">
+        <button onclick="setTheme('light')">☀️ Light</button>
+        <button onclick="setTheme('dark')">🌙 Dark</button>
+        <button class="secondary" onclick="setTheme('system')">
+          💻 System
+        </button>
+      </div>
+
+      <div class="card">
+        <p>
+          Este ejemplo usa variables CSS + media query +
+          persistencia en localStorage.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const storageKey = "theme-preference";
+
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function getSystemTheme() {
+        return mediaQuery.matches ? "dark" : "light";
+      }
+
+      function getStoredTheme() {
+        return localStorage.getItem(storageKey);
+      }
+
+      function applyTheme(theme) {
+        const root = document.documentElement;
+
+        if (theme === "system") {
+          root.removeAttribute("data-theme");
+        } else {
+          root.setAttribute("data-theme", theme);
+        }
+
+        updateLabel(theme);
+      }
+
+      function updateLabel(theme) {
+        const label = document.getElementById("mode-label");
+
+        if (theme === "system") {
+          label.textContent = `system (${getSystemTheme()})`;
+        } else {
+          label.textContent = theme;
+        }
+      }
+
+      function setTheme(theme) {
+        localStorage.setItem(storageKey, theme);
+        applyTheme(theme);
+      }
+
+      function initTheme() {
+        const stored = getStoredTheme() || "system";
+        applyTheme(stored);
+      }
+
+      /* Escuchar cambios del sistema */
+      mediaQuery.addEventListener("change", () => {
+        const stored = getStoredTheme();
+
+        if (!stored || stored === "system") {
+          applyTheme("system");
+        }
+      });
+
+      initTheme();
+    </script>
+  </body>
+</html>

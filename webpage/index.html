@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Lucas Natoli</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --accent: #3b82f6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --text: #0aa619;
+          --accent: #60a5fa;
+        }
+      }
+      html[data-theme="light"] {
+        --bg: #ffffff;
+        --text: #111111;
+        --accent: #3b82f6;
+      }
+      html[data-theme="dark"] {
+        --bg: #0f172a;
+        --text: #0aa619;
+        --accent: #60a5fa;
+      }
+      body {
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+        font-family: monospace;
+      }
+      hr {
+        border: none;
+        border-top: 2px dotted green;
+        width: 90%;
+      }
+      pre {
+        font-size: 2.1vw;
+        margin-block: 0.75em 0.8em;
+      }
+      .card {
+        background: rgba(127, 127, 127, 0.1);
+        margin-bottom: 20px;
+        padding: 0.75rem;
+        border-radius: 12px;
+      }
+      .card img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .card .content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          grid-template-columns: 1fr;
+        }
+
+        .card img {
+          width: 100%;
+        }
+      }
+
+      .cards {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .cards {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <pre>
+▄▄▌  ▄• ▄▌ ▄▄·  ▄▄▄· .▄▄ ·      ▐ ▄  ▄▄▄· ▄▄▄▄▄      ▄▄▌  ▪  
+██•  █▪██▌▐█ ▌▪▐█ ▀█ ▐█ ▀.     •█▌▐█▐█ ▀█ •██  ▪     ██•  ██ 
+██▪  █▌▐█▌██ ▄▄▄█▀▀█ ▄▀▀▀█▄    ▐█▐▐▌▄█▀▀█  ▐█.▪ ▄█▀▄ ██▪  ▐█·
+▐█▌▐▌▐█▄█▌▐███▌▐█ ▪▐▌▐█▄▪▐█    ██▐█▌▐█ ▪▐▌ ▐█▌·▐█▌.▐▌▐█▌▐▌▐█▌
+.▀▀▀  ▀▀▀ ·▀▀▀  ▀  ▀  ▀▀▀▀     ▀▀ █▪ ▀  ▀  ▀▀▀  ▀█▄▀▪.▀▀▀ ▀▀▀
+  </pre
+      >
+    </div>
+
+    <hr />
+
+    <h2>Últimas publicaciones.</h2>
+    <section class="cards">
+      <article class="card">
+        <img src="pwa.jpg" alt="pwa apps" />
+        <div class="content">
+          <h3>Desarrollo de aplicaciones web progresivas (PWA)</h3>
+          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="restapi.png" alt="pwa apps" />
+        <div class="content">
+          <h3>Diseño e implementación de una API REST</h3>
+          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="sqldb.png" alt="pwa apps" />
+        <div class="content">
+          <h3>Desarrollar y optimizar bases de datos SQL</h3>
+          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+        </div>
+      </article>
+    </section>
+    <hr />
+
+    <h2>Proyectos actuales</h2>
+    <section class="cards">
+      <article class="card">
+        <img src="vscodeext.jpg" alt="pwa apps" />
+        <div class="content">
+          <h3>AI Ext - Visual Studio Code Extension</h3>
+          <p>
+            Extension y herramientas para análisis y generación de codigo fuente
+            en Visual Studio Code mediante OpenRouter.
+          </p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="woomate.jpg" alt="pwa apps" />
+        <div class="content">
+          <h3>Woomate</h3>
+          <p>
+            Aplicacion acompañante para tiendas ecommerce creadas con
+            WooCommerce.
+          </p>
+          <p>
+            Mejora la performance en la gestión de la tienda WooCommerce
+            agregando un layer de operaciones y datos que desacopla la carga del
+            servidor. Tambien permite conectar datos y acciones a otros
+            circuitos como Ordenes de Compra y Proveedores.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="pwa.jpg" alt="pwa apps" />
+        <div class="content">
+          <h3>Integración Contabilium</h3>
+          <p>
+            Router y aplicaciones NodeJs para integrar el CRM Contabilium a
+            otros workflows y servicios.
+          </p>
+          <p>
+            Funciona actualmente en varios proyectos de administración y ventas.
+          </p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
