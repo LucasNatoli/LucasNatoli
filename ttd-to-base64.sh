@@ -1,0 +1,1 @@
+base64 -i VCR\ OSD\ Mono.ttf | tr -d '\n'
