@@ -6,12 +6,19 @@
     <meta name="color-scheme" content="light, dark" />
     <title>Lucas Natoli</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PHQMNJ3');</script>
-<!-- End Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5PHQMNJ3");
+    </script>
+    <!-- End Google Tag Manager -->
     <style>
       /* 
       :root {
@@ -43,7 +50,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         flex-direction: column;
         font-family: monospace;
       }
-      h2, h3 {
+      h2,
+      h3 {
         margin-block: 0.25em 0.35em;
       }
       hr {
@@ -70,6 +78,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .card .content {
         display: flex;
         flex-direction: column;
+      }
+
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      /* hover sobre toda la card */
+      .card-link:hover .card {
+        background: rgba(127, 127, 127, 0.2);
+        transform: translateY(-2px);
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      /* opcional: efecto en imagen */
+      .card-link:hover img {
+        transform: scale(1.02);
+        transition: transform 0.2s ease;
       }
 
       @media (max-width: 768px) {
@@ -113,9 +141,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PHQMNJ3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5PHQMNJ3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="banner">
       <pre>
 ▄▄▌  ▄• ▄▌ ▄▄·  ▄▄▄· .▄▄ ·      ▐ ▄  ▄▄▄· ▄▄▄▄▄      ▄▄▌  ▪  
@@ -131,72 +165,96 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2>Últimas publicaciones.</h2>
     <section class="cards">
-      <article class="card">
-        <img src="pwa.jpg" alt="pwa apps" />
-        <div class="content">
-          <h3>Desarrollo de aplicaciones web progresivas (PWA)</h3>
-          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="restapi.png" alt="pwa apps" />
-        <div class="content">
-          <h3>Diseño e implementación de una API REST</h3>
-          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="sqldb.png" alt="pwa apps" />
-        <div class="content">
-          <h3>Desarrollar y optimizar bases de datos SQL</h3>
-          <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
-        </div>
-      </article>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="pwa.jpg" alt="pwa apps" />
+          <div class="content">
+            <h3>Desarrollo de aplicaciones web progresivas (PWA)</h3>
+            <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+          </div>
+        </article>
+      </a>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="restapi.png" alt="api rest" />
+          <div class="content">
+            <h3>Diseño e implementación de una API REST</h3>
+            <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+          </div>
+        </article>
+      </a>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="sqldb.png" alt="databases sql" />
+          <div class="content">
+            <h3>Desarrollar y optimizar bases de datos SQL</h3>
+            <p>Lorem ipsum coso mojo para todo equis existe un y (o ye).</p>
+          </div>
+        </article>
+      </a>
     </section>
     <hr />
 
     <h2>Proyectos actuales</h2>
     <section class="cards">
-      <article class="card">
-        <img src="vscodeext.jpg" alt="pwa apps" />
-        <div class="content">
-          <h3>AI Ext - Visual Studio Code Extension</h3>
-          <p>
-            Extension y herramientas para análisis y generación de codigo fuente
-            en Visual Studio Code mediante OpenRouter.
-          </p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="woomate.jpg" alt="pwa apps" />
-        <div class="content">
-          <h3>Woomate</h3>
-          <p>
-            Aplicacion acompañante para tiendas ecommerce creadas con
-            WooCommerce.
-          </p>
-          <p>
-            Mejora la performance en la gestión de la tienda WooCommerce
-            agregando un layer de operaciones y datos que desacopla la carga del
-            servidor. Tambien permite conectar datos y acciones a otros
-            circuitos como Ordenes de Compra y Proveedores.
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="pwa.jpg" alt="pwa apps" />
-        <div class="content">
-          <h3>Integración Contabilium</h3>
-          <p>
-            Router y aplicaciones NodeJs para integrar el CRM Contabilium a
-            otros workflows y servicios.
-          </p>
-          <p>
-            Funciona actualmente en varios proyectos de administración y ventas.
-          </p>
-        </div>
-      </article>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="vscodeext.jpg" alt="GrowCup" />
+          <div class="content">
+            <h3>GrowCup</h3>
+            <p>
+              Aplicacion para competencias y catas de productos elaborados por
+              cultivadores de cannabis.
+            </p>
+          </div>
+        </article>
+      </a>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="vscodeext.jpg" alt="vs ext" />
+          <div class="content">
+            <h3>AI Ext - Visual Studio Code Extension</h3>
+            <p>
+              Extension y herramientas para análisis y generación de codigo
+              fuente en Visual Studio Code mediante OpenRouter.
+            </p>
+          </div>
+        </article>
+      </a>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="woomate.jpg" alt="woomate" />
+          <div class="content">
+            <h3>Woomate</h3>
+            <p>
+              Aplicacion acompañante para tiendas ecommerce creadas con
+              WooCommerce.
+            </p>
+            <p>
+              Mejora la performance en la gestión de la tienda WooCommerce
+              agregando un layer de operaciones y datos que desacopla la carga
+              del servidor. Tambien permite conectar datos y acciones a otros
+              circuitos como Ordenes de Compra y Proveedores.
+            </p>
+          </div>
+        </article>
+      </a>
+      <a href="#" class="card-link">
+        <article class="card">
+          <img src="pwa.jpg" alt="pwa apps" />
+          <div class="content">
+            <h3>Integración Contabilium</h3>
+            <p>
+              Router y aplicaciones NodeJs para integrar el CRM Contabilium a
+              otros workflows y servicios.
+            </p>
+            <p>
+              Funciona actualmente en varios proyectos de administración y
+              ventas.
+            </p>
+          </div>
+        </article>
+      </a>
     </section>
   </body>
 </html>
